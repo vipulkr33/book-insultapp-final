@@ -15,9 +15,11 @@ public class InsultGenerator {
 			String databaseURL = "jdbc:mysql://";
 			databaseURL += System.getenv("MYSQL_SERVICE_HOST");
 			databaseURL += "/" + System.getenv("MYSQL_DATABASE");
+			databaseUrl += "?useSSL=false";
 
 			String username = System.getenv("MYSQL_USER");
 			String password = System.getenv("MYSQL_PASSWORD");
+			Class.forName ("com.mysql.cj.jdbc.Driver").newInstance ();
 			Connection connection = DriverManager.getConnection(databaseURL, username, password);
 
 			if (connection != null) {
