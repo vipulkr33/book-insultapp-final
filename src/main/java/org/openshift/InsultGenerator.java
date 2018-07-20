@@ -12,12 +12,12 @@ public class InsultGenerator {
 		String theInsult = "";
 		
 		try {
-			String databaseURL = "jdbc:postgresql://";
-			databaseURL += System.getenv("POSTGRESQL_SERVICE_HOST");
-			databaseURL += "/" + System.getenv("POSTGRESQL_DATABASE");
+			String databaseURL = "jdbc:mysql://";
+			databaseURL += System.getenv("MYSQL_SERVICE_HOST");
+			databaseURL += "/" + System.getenv("MYSQL_DATABASE");
 
-			String username = System.getenv("POSTGRESQL_USER");
-			String password = System.getenv("PGPASSWORD");
+			String username = System.getenv("MYSQL_USER");
+			String password = System.getenv("MYSQL_PASSWORD");
 			Connection connection = DriverManager.getConnection(databaseURL, username, password);
 
 			if (connection != null) {
