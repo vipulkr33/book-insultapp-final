@@ -15,9 +15,9 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>9.4-1200-jdbc41</version>
+    			<groupId>mysql</groupId>
+    			<artifactId>mysql-connector-java</artifactId>
+    			<version>8.0.11</version>
 		</dependency>
 		<dependency>
             <groupId>javax</groupId>
